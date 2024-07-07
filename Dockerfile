@@ -16,7 +16,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 RUN dnf -y install rpm redhat-release dnf-plugins-core \
  && dnf -y update \
  && dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm \
- && yum -y install \
+ && dnf -y install \
       epel-release \
       initscripts \
       sudo \
@@ -26,7 +26,7 @@ RUN dnf -y install rpm redhat-release dnf-plugins-core \
       python3 \
       python3-pip \
       python3-pyyaml \
- && yum clean all
+ && dnf clean all
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip \
     && pip3 install --no-cache-dir ansible
