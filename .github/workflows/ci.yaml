@@ -34,7 +34,7 @@
         uses: e1himself/goss-installation-action@v1.2.1
   
       - name: Build and Export
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64
