@@ -16,7 +16,7 @@
       steps:
         - uses: actions/checkout@v4
   
-        - uses: hadolint/hadolint-action@v3.1.0
+        - uses: hadolint/hadolint-action@v3.3.0
           with:
             ignore: DL3007,DL3003,SC2086,DL3041,DL3013,DL3059,SC3037
   
